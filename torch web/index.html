@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torch Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<style>
+    * {
+        margin: auto;
+        padding: 0;
+
+    }
+
+    body {
+        background: #1d2026;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 20px;
+        padding: 20px;
+        font-family: serif;
+    }
+
+    .left {
+        margin-right: 7%;
+    }
+
+    .right {
+        margin-left: 5%;
+        display: flex;
+
+    }
+
+    h1 {
+        color: white;
+        padding-left: 10px;
+        margin-right: 10px;
+    }
+
+    h1 span {
+        color: lightgreen;
+    }
+
+    .torch img {
+        position: absolute;
+        top: -100px;
+        left: 200px;
+    }
+
+    .light img {
+        position: absolute;
+
+        top: 480px;
+        left: -150px;
+
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="right">
+
+            <img src="/images/menu.png" alt="">
+            <div>
+                <h1>Lamp<span>Light</span></h1>
+            </div>
+
+        </div>
+
+
+        <div class="left">
+            <ul>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">Modern</a></li>
+                <li><a href="#">Special</a></li>
+                <li><a href="#">Affordable</a></li>
+
+
+            </ul>
+            <div id="dark-btn">
+                <span></span>
+            </div>
+        </div>
+
+    </nav>
+    <div class="torch">
+        <img src="/images/lamp.png" alt="">
+    </div>
+    <div class="light" id="light">
+        <img src="/images/light.png" alt="">
+    </div>
+
+
+
+
+    <script>
+        var light = document.getElementById("light");
+        var btn = document.getElementById("dark-btn");
+        btn.addEventListener('click', () => {
+
+            console.log("dark-btn is working");
+            btn.classList.toggle("dark-btn-on");
+            light.classList.toggle("OFF");
+
+
+        })
+    </script>
+</body>
+
+</html>
